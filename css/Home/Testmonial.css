@@ -40,6 +40,7 @@
 .testimonial-carousel .owl-item .testimonial-text,
 .testimonial-carousel .owl-item.center .testimonial-text * {
     transition: .5s;
+    margin-top: 0.4rem;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
