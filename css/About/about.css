@@ -1,0 +1,48 @@
+.check-icons {
+    width: 30px;
+    height: 30px;
+} .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the image and the text */
+}
+
+
+.wrapper {
+    display: flex;
+    gap: 30px;
+    margin: 3rem;
+}
+
+.wrapper.wrapper  .container {
+    background: var(--light);
+        padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.wrapper.wrapper  .container:hover {
+    transform: translateY(-10px);
+}
+
+.wrapper .container i {
+    font-size: 40px;
+    color: #181d38 ;
+    margin-bottom: 10px;
+}
+
+.wrapper .num {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+}
+
+.wrapper .text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    margin-top: 10px;
+}
