@@ -26,16 +26,18 @@
     color: var(--primary);
 }
 
+/* Ensure the Contact Us button is displayed correctly in mobile view */
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
+    .navbar-collapse .btn.btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
-
-    .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
+    .navbar-collapse .btn.btn-primary i {
+        margin-left: 0;
     }
 }
+
 
 .navbar-light .navbar-brand,
 .navbar-light a.btn {

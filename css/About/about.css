@@ -1,48 +1,182 @@
 .check-icons {
-    width: 30px;
-    height: 30px;
-} .icon-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between the image and the text */
+  width: 30px;
+  height: 30px;
 }
-
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the image and the text */
+}
 
 .wrapper {
-    display: flex;
-    gap: 30px;
-    margin: 3rem;
+  display: flex;
+  gap: 30px;
+  margin: 3rem;
 }
 
-.wrapper.wrapper  .container {
-    background: var(--light);
-        padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+.wrapper.wrapper .container {
+  background: var(--light);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.wrapper.wrapper  .container:hover {
-    transform: translateY(-10px);
+.wrapper.wrapper .container:hover {
+  transform: translateY(-10px);
 }
 
 .wrapper .container i {
-    font-size: 40px;
-    color: #181d38 ;
-    margin-bottom: 10px;
+  font-size: 40px;
+  color: #181d38;
+  margin-bottom: 10px;
 }
 
 .wrapper .num {
-    display: block;
-    font-size: 48px;
-    font-weight: 700;
-    color: #333;
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
 }
 
 .wrapper .text {
-    font-size: 18px;
-    font-weight: 500;
-    color: #777;
-    margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #777;
+  margin-top: 10px;
+}
+.owl-next {
+  background-color: red;
+  background: blue;
+}
+
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-item {
+  width: 100%;
+}
+
+.owl-nav .owl-prev {
+  left: 10px; /* Position left arrow */
+}
+
+.owl-nav .owl-next {
+  right: 10px; /* Position right arrow */
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background: darkred; /* Darker red on hover */
+}
+
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-item {
+  width: 100%;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .wrapper .container {
+        flex: 1 1 auto; /* Allow containers to shrink to fit */
+        margin-bottom: 20px; /* Space between stacked items */
+    }
+}
+/*====== */
+.header {
+  text-align: center;
+}
+.second-container {
+  display: flex;
+  gap: 20px; /* Adjust the spacing between blocks as needed */
+  flex-wrap: wrap; /* Allows wrapping of content blocks */
+  padding-inline: 90px; /* Add padding around the container */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.first {
+  border: 2px solid #0f345e; /* Adjust border width and color as needed */
+  border-radius: 8px; /* Optional: rounds the corners of the border */
+  padding: 20px; /* Adds padding inside each block */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+  flex: 1 1 calc(33% - 20px); /* Responsive width for each block, adjust as needed */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  position: relative; /* Required for absolute positioning of icons */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.first:hover {
+  cursor: pointer;
+
+  transform: scale(1.05); /* Zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.first i {
+  font-size: 43px; /* Icon size */
+  color: #0f345e; /* Icon color */
+  text-align: center;
+  display: block; /* Makes the icon a block element for centering */
+  margin: 0 auto; /* Centers the icon horizontally */
+  margin-bottom: 20px; /* Space between icon and heading */
+  position: relative; /* Allows positioning of the underline effect */
+}
+
+.first h4 {
+  text-align: center;
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.first p {
+  margin-bottom: 0; /* Removes the bottom margin from the paragraph */
+}
+
+.first:hover i::after {
+  content: "";
+  display: block;
+  cursor: pointer;
+  width: 50%; /* Adjust width of the underline as needed */
+  height: 2px; /* Height of the underline */
+  background-color: #0f345e; /* Color of the underline */
+  position: absolute;
+  bottom: -10px; /* Position of the underline below the icon */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the underline */
+}
+@media (max-width: 768px) {
+  .second-container {
+    flex-direction: column; /* Stack the blocks vertically on smaller screens */
+    gap: 15px; /* Reduce the gap between blocks on smaller screens */
+    padding-inline: 19px;
+  }
+
+  .first {
+    flex: 1 1 100%; /* Make each block take the full width on smaller screens */
+    max-width: 100%; /* Ensure the blocks don’t exceed the container width */
+  }
+
+  .first i {
+    font-size: 36px; /* Reduce icon size on smaller screens */
+  }
+
+  .first h2 {
+    font-size: 1.2rem; /* Adjust heading font size on smaller screens */
+  }
+
+  .first p {
+    font-size: 0.9rem; /* Adjust paragraph font size on smaller screens */
+  }
 }

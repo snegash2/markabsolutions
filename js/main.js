@@ -33,7 +33,7 @@
                 const target = +counter.getAttribute('data-val');
                 const count = +counter.innerText;
     
-                const speed = 20;
+                const speed = 200;
                 const increment = target / speed;
     
                 if (count < target) {
@@ -120,6 +120,7 @@ $(document).ready(function () {
         dots: true,
         loop: true,
         nav : false,
+        
         responsive: {
             0:{
                 items:1
@@ -131,7 +132,9 @@ $(document).ready(function () {
                 items:3
             }
         }
+        
     });
     
 })(jQuery);
 
+new WOW().init();
