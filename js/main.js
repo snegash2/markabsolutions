@@ -138,3 +138,20 @@ $(document).ready(function () {
 })(jQuery);
 
 new WOW().init();
+// accordion js  
+
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+        header.addEventListener('click', function() {
+            const body = this.nextElementSibling;
+            const isVisible = body.style.display === 'block';
+
+            // Close all other accordion bodies
+            document.querySelectorAll('.accordion-body').forEach(item => {
+                item.style.display = 'none';
+            });
+
+            // Toggle the clicked item
+            body.style.display = isVisible ? 'none' : 'block';
+        });
+    });

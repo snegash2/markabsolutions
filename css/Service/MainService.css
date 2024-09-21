@@ -1,0 +1,104 @@
+.main-con {
+    padding: 2rem 7rem;
+}
+.first-con{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: -9rem;
+}
+.first-con p{
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: black;
+}
+
+/*  */
+
+.Second-Services section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.Second-Services .row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 71rem;
+    /* text-align: center; */
+    margin-left: 6rem;
+}
+.Second-Services .column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.Second-Services .card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #181d38 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.Second-Services h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+.Second-Services p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.Second-Services .icon-wrapper {
+  background-color: #181d38;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.Second-Services .card:hover {
+  background-position: 0 100%;
+}
+.Second-Services .card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #2c7bfe;
+}
+.Second-Services .card:hover h3 {
+  color: #ffffff;
+}
+.Second-Services .card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  .Second-Services section {
+    padding: 0 2em;
+  }
+  .Second-Services .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Second-Services section {
+    padding: 1em 3em;
+  }
+  .Second-Services .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}

@@ -1,0 +1,74 @@
+    
+.accordions .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+.accordions .header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.accordions .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.accordions .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.accordions .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.accordions .accordion {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.accordions .accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+.accordions .accordion-header {
+    background-color: #2bc5d4;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+}
+.accordions .accordion-body {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+
+.accordions .accordion-header {
+    position: relative;
+}
+
+.accordions .accordion-header::after {
+    content: '▶'; /* Right-facing arrow */
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s;
+}
+
+.accordions .accordion-header.active::after {
+    transform: rotate(90deg); /* Rotate for downward arrow */
+}
+@media (max-width: 768px) {
+    .accordions .container {
+        grid-template-columns: 1fr;
+    }
+}
