@@ -2,7 +2,7 @@
     padding: 2rem 7rem;
 }
 .first-con{
-    background-color: white;
+    background-color: #fdf7f7;
     padding: 2rem;
     border-radius: 1rem;
     margin-top: -9rem;
@@ -13,7 +13,9 @@
     line-height: 1.6;
     color: black;
 }
-
+#con{
+  margin-top: -1rem;
+}
 /*  */
 
 .Second-Services section {
