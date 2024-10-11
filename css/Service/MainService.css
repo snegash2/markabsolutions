@@ -94,8 +94,10 @@
     flex: 0 50%;
     max-width: 50%;
   }
+ 
 }
 @media screen and (min-width: 992px) {
+  
   .Second-Services section {
     padding: 1em 3em;
   }
@@ -104,3 +106,11 @@
     max-width: 33.33%;
   }
 }
+@media screen and (max-width: 768px) {
+  .Second-Services .row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 24rem;
+    text-align: center;
+    margin-left: 0rem;
+}}

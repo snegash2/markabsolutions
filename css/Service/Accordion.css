@@ -7,7 +7,8 @@
     min-height: 100vh;
     gap: 78px; /* Space between image and content */
     padding-left: 6rem;
-    margin-top: -6rem;
+    margin-top: -9.6rem;
+    margin-bottom: -5rem;
     }
     
 .landing-image {
@@ -56,14 +57,25 @@ transform: translateY(-5px); /* Hover animation */
 box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
-.feature-item .icon {
-background-color: #2c3e50;
-color: white;
-border-radius: 50%;
-padding: 8px;
-margin-right: 13px;
-font-size: 23px;
+.feature-item {
+    display: flex;
+    align-items: center; /* Aligns the icon and text vertically */
+    margin-bottom: 20px; /* Adds some spacing between items */
 }
+
+.feature-item .icon {
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center; /* Vertically center the icon */
+    width: 45px;
+    height: 46px;
+    font-size: 21px;
+    margin-right: 13px; /* Spacing between the icon and the text */
+}
+
 
 .feature-item p {
 font-size: 1.3rem;
@@ -74,15 +86,26 @@ font-family: 'Poppins', sans-serif;
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+
+    .main-con {
+        padding: 2rem 0.9rem;
+    }
 .landing-section {
     flex-direction: column;
     text-align: center;
-    margin-top: 0rem;
+    margin-top: -4rem;
+    margin-bottom: -2rem;
+    padding-left: 0rem;
+    padding: 0px;
+    gap: 10px;
+    min-height:70vh
 }
 
 .landing-content {
     padding: 0;
 }
+.feature-item p {
+    font-size: 17px;}
 
 .landing-image img {
     width: 80%; /* Resize the image on small screens */
