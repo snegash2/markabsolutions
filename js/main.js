@@ -155,3 +155,28 @@ new WOW().init();
             body.style.display = isVisible ? 'none' : 'block';
         });
     });
+// product progress bar
+document.querySelectorAll(".circle").forEach(function (circle) {
+  let progress = circle.getAttribute("data-progress");
+  let count = 0;
+  let angle = 0;
+
+  let progressValue = circle.querySelector(".progress-value");
+  let animationDuration = 2000; // 2 seconds
+  let stepTime = animationDuration / progress;
+
+  let interval = setInterval(() => {
+    count++;
+    angle = count * 3.6; // Convert percentage to degrees (100% = 360 degrees)
+
+    // Update the progress value text
+    progressValue.innerText = `${count}%`;
+
+    // Apply the fill animation based on the progress
+    circle.style.background = `conic-gradient(#ff6600 ${angle}deg, #ddd 0deg)`;
+
+    if (count >= progress) {
+      clearInterval(interval); // Stop when it reaches the target progress
+    }
+  }, stepTime);
+});

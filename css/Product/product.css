@@ -1,0 +1,172 @@
+.services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 31px;
+  padding: 64px;
+}
+
+.service-box {
+  display: flex;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.service-image {
+  width: 150px; /* Adjust image size */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.service-content {
+  max-width: calc(100% - 150px); /* Ensure text takes remaining space */
+}
+
+.service-content h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+  .service-box {
+    flex-direction: column; /* Stack image and content */
+  }
+  .service-image {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+/* Styling for the features section */
+.features-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 30px; /* Space between feature boxes */
+    padding: 50px;
+    background-color: #fff; /* Light background color */
+  }
+  
+  /* Individual feature box styles */
+  .feature-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Icon styles */
+  .feature-box i {
+    font-size: 40px;
+    color: #0F345E; /* Main icon color */
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Feature content (heading and paragraph) styles */
+  .feature-content h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .feature-content p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Hover effect for feature boxes */
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  }
+  
+  .feature-box:hover i {
+    color: #2bc5d4; /* Darker orange on hover */
+  }
+  
+  /* Responsive adjustments for mobile screens */
+  @media (max-width: 768px) {
+    .features-section {
+      grid-template-columns: 1fr; /* Stack features in one column on smaller screens */
+    }
+  }
+  
+  .skills {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #fff;
+  }
+  
+  .skill {
+    text-align: center;
+  }
+  
+  .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 8px #ddd;
+    z-index: 1;
+  }
+  
+  .circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 8px #0F345E;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    clip: rect(0px, 120px, 120px, 60px);
+    z-index: 1;
+  }
+  
+  .progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    z-index: 2;
+  }
+  
