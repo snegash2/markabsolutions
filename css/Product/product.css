@@ -19,10 +19,11 @@
 }
 
 .service-image {
-  width: 150px; /* Adjust image size */
-  height: auto;
+  width: 150px; 
+  height: 111px;
   margin-right: 20px;
   border-radius: 10px;
+  margin-top: 31px;
 }
 
 .service-content {
@@ -39,7 +40,9 @@
   font-size: 1rem;
   color: #555;
 }
-
+.prev{
+  margin-left: 39rem;
+}
 @media (max-width: 768px) {
   .services-section {
     grid-template-columns: 1fr; /* Stack on smaller screens */
@@ -47,9 +50,17 @@
   .service-box {
     flex-direction: column; /* Stack image and content */
   }
-  .service-image {
+  /* .service-image {
     margin-bottom: 20px;
     width: 100%;
+  } */
+  img.service-image{
+    width: 16rem;
+    height: 146px;
+    margin-bottom: 15px;
+  }
+  .prev{
+    margin-left: 8rem;
   }
 }
 /* Styling for the features section */
@@ -108,18 +119,60 @@
     .features-section {
       grid-template-columns: 1fr; /* Stack features in one column on smaller screens */
     }
+    .service-content {
+      max-width: calc(100% - 0px);
   }
-  
+  .services-section{
+    padding: 24px;
+  }
+  img.service-box .service-image {
+    
+    width: 273px;
+    height: 171px;
+
+  }
+  .skill {
+    grid-template-columns: 1fr; /* Switches to a single column on smaller screens */
+  }
+
+}
+.skills {
+  display: grid; /* Use grid for layout */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Two columns of equal width */
+  gap: 15px; /* Space between items */
+  padding: 50px;
+  background-color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+}
+
+.skill {
+  text-align: left;
+}
+.skill p{
+  margin-left: 25px;
+}
+
+@media (max-width: 768px) {
   .skills {
+    margin-left: 0rem;
+    grid-template-columns: 1fr 1fr; /* Switch to a single column on screens smaller than 768px */
+  }
+}
+
+  /* .skills {
     display: flex;
     justify-content: space-around;
     padding: 50px;
     background-color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .skill {
     text-align: center;
-  }
+  } */
   
   .circle {
     width: 120px;
@@ -169,4 +222,90 @@
     color: #333;
     z-index: 2;
   }
+  /*  */
+
+
   
+  /* Global font family */
+#prod-img
+{
+      width: 150px; /* Adjust image size */
+    height: 130px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  
+
+  .prev, .next {
+    background-color: #0F345E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: #0056b3;
+  }
+
+  .slider {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-button-container {
+    display: flex;
+    justify-content: flex-start;  /* Aligns buttons to the left */
+    margin-top: 15px;
+  }
+
+  .animated-contact-button {
+    display: inline-block;
+    padding: 8px 20px;  /* Smaller button size */
+    font-size: 14px;
+    color: #0F345E;
+    font-family: "Kanit", sans-serif;
+    background-color: transparent;
+    border: 2px solid #0F345E;
+    border-radius: 5px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    transition: color 0.4s ease;
+    margin-right: 10px;  /* Adds space between buttons */
+  }
+
+  .animated-contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;  /* Start from the left side of the button */
+    width: 100%;
+    height: 100%;
+    background-color: #0F345E;
+    transition: right 0.4s ease;  /* Transition from left to right */
+    z-index: -1;
+  }
+
+  .animated-contact-button:hover::before {
+    right: 0;  /* Moves from left to right when hovered */
+  }
+
+  .animated-contact-button:hover {
+    color: white;  /* Text color changes to white on hover */
+  }
